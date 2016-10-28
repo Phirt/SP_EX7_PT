@@ -1,0 +1,10 @@
+<table class="table">
+        <th></th>
+            <th ng-repeat="course in studentsInfo.allCourses">{{course.courseName}}</th>
+            <th>Average</th>
+        <tr ng-repeat="student in studentsInfo.students">
+            <td>{{student.name}}</td>
+            <td ng-repeat="grade in student.grades">{{grade.grade}}</td>
+            <td>{{student.grades | average}}</td>
+        </tr>
+</table>
